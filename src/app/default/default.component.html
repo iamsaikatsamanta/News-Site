@@ -1,0 +1,24 @@
+<div class="ui main text container">
+  <div class="ui huge header">{{ componentTitle }}</div>
+  <div class="ui top attached segment">
+    <div class="ui divided items" *ngFor="let post of posts">
+      <div class="item">
+        <div class="image">
+          <img src="{{ post.urlToImage }}" alt="No Image">
+        </div>
+        <div class="contant">
+          <a href="{{ post }}" class="header">{{ post.title }}</a>
+          <div class="meta">
+            <span>{{ post.publishedAt | date }}</span>
+          </div>
+          <div class="description">
+            <p>{{ post.description.substr(0,100) }}...</p>
+          </div>
+          <div class="extra">
+            <a href="{{ post.url }}" class="ui flooted  basic violet button">Read More <i class="Chevron Right icon"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
